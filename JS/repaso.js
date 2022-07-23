@@ -36,14 +36,14 @@ cuadros de dialogo
 //parseInt()  parseFloat()
 
  
- let username = prompt("ingrese su nombre:")
+ //let username = prompt("ingrese su nombre:")
 
-debugger
+//debugger
 
-
+/*
     if( username == "Coderhouse"){
         console.log("bienvenido", username)
     } else{
         console.warn("no se reconoce el usuario")
     }
-    
+    */
