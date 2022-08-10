@@ -4,7 +4,7 @@ let valorf = 0;
 let valort = 0;
 
 function calcInteres() {
-  valort = valori * 1.05;
+  valort = valori * 1.15;
   valorf = valort / cuotas;
   confirm(
     `el valor de su cuota es de $ ${valorf} y el valor total es $ ${valort}`
