@@ -1,6 +1,3 @@
-let confirmacion = true;
-let valor = 0;
-let peso = 0;
 class Cafe {
   constructor(id, origen, precio, peso) {
     this.id = id;
@@ -26,15 +23,24 @@ function generadorauto() {
 }
 generadorauto();
 
-do {
-  let encargo = prompt(
-    "Bienvenidos a vulkano coffee, indique el origen de cafe que desea encargar, le recordmos que contamos con BRASIL | HONDURAS | INDIA | PERU | COLOMBIA | MEXICO | GUATEMALA | ETIOPIA "
-  );
-  encargo = encargo.toUpperCase();
-  let busqueda = origenes.find((producto) => producto.origen.includes(encargo));
-  valor = busqueda.precio;
-  peso = busqueda.peso;
-  confirmacion = confirm(`usted eligio ${encargo}, es correcto?`);
-} while (confirmacion != true);
+function crearProducto() {
+  debugger;
+  let producto = document.getElementById("productos");
 
-alert(`el precio a pagar es de $ ${valor} por ${peso} `);
+  for (producto of origenes) {
+    let contenedor = document.createElement("div");
+    contenedor.className = "cafe";
+    let lista = document.createElement("ul");
+    lista.id = "txtProd";
+    lista.innerHTML = `<li>Origen: ${origenes.origen}</li>
+    <li>Precio: ${origenes.precio}</li>
+    <li>Peso: ${origenes.peso}</li>`;
+    let btn = document.createElement("button");
+    btn.className = "btnAgr";
+  }
+}
+
+for (let i = 0; i < 8; i++) {
+  crearProducto();
+}
+
