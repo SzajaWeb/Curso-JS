@@ -23,20 +23,32 @@ function generadorauto() {
 }
 generadorauto();
 
-function crearProducto() {
-  debugger;
-  let producto = document.getElementById("productos");
+const producto = document.getElementById("productos");
 
-  for (producto of origenes) {
+function crearProducto() {
+  
+  
+debugger
+  for (let prod of origenes) {
     let contenedor = document.createElement("div");
     contenedor.className = "cafe";
+    producto.appendChild(contenedor)
+
+    const image = document.createElement("img")
+    image.className = "imgBolsa";
+    image.src  = "../img/bolsa cafe.jpg"
+    producto.appendChild(image)
+
     let lista = document.createElement("ul");
     lista.id = "txtProd";
-    lista.innerHTML = `<li>Origen: ${origenes.origen}</li>
-    <li>Precio: ${origenes.precio}</li>
-    <li>Peso: ${origenes.peso}</li>`;
+    lista.innerHTML = `<li>Origen: ${prod.origen}</li>
+    <li>Precio: ${prod.precio}</li>
+    <li>Peso: ${prod.peso}</li>`;
+    producto.appendChild(lista)
     let btn = document.createElement("button");
+    btn.innerText = "agregar al carrito"
     btn.className = "btnAgr";
+    producto.appendChild(btn)
   }
 }
 

@@ -67,11 +67,10 @@ body {
   display: inline-block;
   list-style: none;
   margin-right: 3rem;
-}
-#txtProd {
   font-size: 3rem;
   color: aliceblue;
 }
+
 
 .btnAgr {
   display: inline-block;
