@@ -67,8 +67,9 @@ body {
   display: inline-block;
   list-style: none;
   margin-right: 3rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: aliceblue;
+  line-height: 3.5rem;
 }
 
 

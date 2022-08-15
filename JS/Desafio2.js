@@ -32,27 +32,27 @@ debugger
   for (let prod of origenes) {
     let contenedor = document.createElement("div");
     contenedor.className = "cafe";
-    producto.appendChild(contenedor)
+    
 
     const image = document.createElement("img")
     image.className = "imgBolsa";
     image.src  = "../img/bolsa cafe.jpg"
-    producto.appendChild(image)
+    contenedor.appendChild(image)
 
     let lista = document.createElement("ul");
     lista.id = "txtProd";
     lista.innerHTML = `<li>Origen: ${prod.origen}</li>
     <li>Precio: ${prod.precio}</li>
     <li>Peso: ${prod.peso}</li>`;
-    producto.appendChild(lista)
+    contenedor.appendChild(lista)
+
     let btn = document.createElement("button");
     btn.innerText = "agregar al carrito"
     btn.className = "btnAgr";
-    producto.appendChild(btn)
+    contenedor.appendChild(btn)
+
+    producto.appendChild(contenedor);
   }
 }
-
-for (let i = 0; i < 8; i++) {
-  crearProducto();
-}
+crearProducto()
 
