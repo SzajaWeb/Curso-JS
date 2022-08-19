@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DynaPuff&display=swap");
+
 html {
   font-size: 62.5%;
 }
@@ -13,13 +15,14 @@ body {
 #nav li a {
   text-decoration: none;
   color: rgb(252, 178, 66);
-  font-family: Arizonia, sans-serif;
+  font-family: DynaPuff, sans-serif;
   font-size: 4rem;
 }
 
 #nav {
   list-style: none;
   background-color: rgba(252, 178, 66, 0.7);
+  display: flex;
 }
 
 #nav li {
@@ -37,12 +40,13 @@ body {
 }
 
 #productos {
-  align-items: center;
+ 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: (auto, 1fr);
   margin: 2rem;
   padding: 2rem;
+
 }
 .imgBolsa {
   width: 38rem;
@@ -55,23 +59,24 @@ body {
   flex-direction: column;
 }
 .cafe {
-  display: inline-block;
+  display: flex;
   background-color: rgba(88, 88, 88, 0.9);
   width: 45rem;
   height: 60rem;
   margin-top: 3rem;
   border-radius: 1rem;
+  flex-wrap: wrap;
 }
 
 #txtProd {
   display: inline-block;
   list-style: none;
   margin-right: 3rem;
+  font-family: DynaPuff, sans-serif;
   font-size: 2rem;
   color: aliceblue;
   line-height: 3.5rem;
 }
-
 
 .btnAgr {
   display: inline-block;
@@ -80,6 +85,51 @@ body {
   border: solid;
   border-radius: 1rem;
   padding: 1.5rem;
-  font-size: 2rem;
+  font-size: 1.8rem;
   background-color: black;
+  height: 6rem;
+  margin-top: 4rem;
+  margin-left: 1rem;
 }
+.btnAgr:hover {
+  transform: scale(1.2);
+  transition: all 0.3s;
+}
+
+.carritocomp {
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-left: 43rem;
+}
+
+
+footer{
+  background-color:rgb(252, 178, 66);
+  
+}
+#redes{
+display: flex;
+justify-content: center;
+}
+
+#insta{
+width: 10rem;
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+
+#facebook{
+margin-right: 2rem;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+
+#twitter{
+margin-bottom: 1rem;
+margin-top: 1rem;
+}
+footer div a img:hover {
+  transform: rotate(46deg) scale(1.2);
+  transition: all .4s; }
