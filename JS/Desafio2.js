@@ -45,26 +45,25 @@ function crearProducto() {
     let btn = document.createElement("button");
     btn.innerText = "Agregar al carrito";
     btn.className = "btnAgr";
-
+    btn.id = `prodid${prod.id}`;
+ 
     contenedor.appendChild(btn);
 
     producto.appendChild(contenedor);
   }
+ 
 }
+agregarClick();
 crearProducto();
 
-const prods = document.getElementsByClassName("btnAgr");
 
 
 
-
-  for (let i = 0; i < prods.length; i++) {
-    prods[i].addEventListener("click", clickAgrCarro);
-  }
- 
-
-function clickAgrCarro(e) {
-
-  console.log(e.target.className)
-  }
-
+function agregarClick() {
+  origenes.forEach((prods) => {
+    document.querySelector(`#prodid${prods.id}`);
+    document.addEventListener("click", () => {
+      console.log(prods);
+    });
+  });
+}

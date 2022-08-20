@@ -104,6 +104,10 @@ body {
   margin-left: 43rem;
 }
 
+.pantallaCarrito{
+  background-color: rgba(88, 88, 88, 0.9);
+  
+}
 
 footer{
   background-color:rgb(252, 178, 66);
