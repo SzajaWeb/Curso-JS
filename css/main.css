@@ -18,11 +18,19 @@ body {
   font-family: DynaPuff, sans-serif;
   font-size: 4rem;
 }
+.logoInicio{
+width: 8rem;
+height: 8rem;
+display: flex;
+margin-top: 0.5rem;
+margin-right: 3rem;
+}
 
 #nav {
   list-style: none;
   background-color: rgba(252, 178, 66, 0.7);
   display: flex;
+  height: 9rem;
 }
 
 #nav li {
@@ -96,18 +104,6 @@ body {
   transition: all 0.3s;
 }
 
-.carritocomp {
-  height: 8rem;
-  width: 8rem;
-  display: flex;
-  margin-top: 0.5rem;
-  margin-left: 43rem;
-}
-
-.pantallaCarrito{
-  background-color: rgba(88, 88, 88, 0.9);
-  
-}
 
 footer{
   background-color:rgb(252, 178, 66);
@@ -137,3 +133,73 @@ margin-top: 1rem;
 footer div a img:hover {
   transform: rotate(46deg) scale(1.2);
   transition: all .4s; }
+  
+  #btnCarrito{
+    height: 9rem;
+    width: 9rem;
+    background: none;
+    border: 0;
+    display: inline-block;
+   margin-left: 30rem;
+    
+  }
+
+
+  #btnCarrito img{
+    height: 8rem;
+    width: 8rem;
+   
+  }
+  
+
+
+#carritoComp{
+  background-color: antiquewhite;
+  width: 100rem;
+  height: 55rem;
+  margin: auto;
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  border: solid;
+  border-radius: 1rem;
+}
+
+
+#carritoProds{
+  background-color: rgb(252, 178, 66) ;
+  height: 55rem;
+  width: 70rem;
+float: left;
+border-top-left-radius: 0.7rem;
+border-bottom-left-radius: 0.7rem;
+font-size: 3rem;
+}
+
+
+#carritoBtns{
+  background-color: rgb(150, 85, 0);
+  height: 55rem;
+  width: 30rem;
+  float: right;
+  border-top-right-radius: 0.7rem;
+  border-bottom-right-radius: 0.7rem;
+}
+#tituloCarrito{
+  color: aliceblue;
+  font-size: 4rem;
+  font-family: DynaPuff, sans-serif;
+  text-align: center;
+}
+
+#btnVaciar{
+background-color: aliceblue;
+width: 5rem;
+height: 5rem;
+}
+
+#btnComprar{
+  background-color: aliceblue;
+  width: 5rem;
+  height: 5rem;
+}
+

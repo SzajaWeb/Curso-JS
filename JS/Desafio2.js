@@ -6,6 +6,7 @@ class Cafe {
     this.peso = peso;
   }
 }
+const carrito = [];
 
 const origenes = [];
 function creoid() {
@@ -46,24 +47,87 @@ function crearProducto() {
     btn.innerText = "Agregar al carrito";
     btn.className = "btnAgr";
     btn.id = `prodid${prod.id}`;
- 
+
     contenedor.appendChild(btn);
 
     producto.appendChild(contenedor);
   }
- 
+  agregarClick();
 }
-agregarClick();
+
 crearProducto();
-
-
-
 
 function agregarClick() {
   origenes.forEach((prods) => {
-    document.querySelector(`#prodid${prods.id}`);
-    document.addEventListener("click", () => {
-      console.log(prods);
-    });
+    document
+      .querySelector(`#prodid${prods.id}`)
+      .addEventListener("click", () => {
+        agregarAlCarrito(prods);
+      });
   });
 }
+
+function agregarAlCarrito(prods) {
+  let existe = carrito.some((productoSome) => productoSome.id === prods.id);
+  if (existe === false) {
+    prods.cantidad = 1;
+    carrito.push(prods);
+  } else {
+    prods.cantidad++;
+  }
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+  console.log(carrito);
+  cargarProds();
+}
+
+
+function recuperoProdsLS(){
+  if(localStorage.carrito){
+const prodsGuardados = JSON.parse(localStorage.getItem("carrito"))
+
+    prodsGuardados.forEach( prod => {
+      carrito.push(prod)
+    })
+  }
+}
+
+function cargarProds(){
+  const cuerpo = document.getElementById("carritoProds")
+  
+  carrito.forEach(prodAgr => {
+    cuerpo.innerHTML += `
+    <ul>
+    <li>ID: ${prodAgr.id}</li>
+    <li>Origen: ${prodAgr.origen}</li>
+    <li>Precio: ${prodAgr.precio}</li>
+    <li>Peso: ${prodAgr.peso}</li>
+    </ul>`
+  })
+}
+
+// function renderizarCarrito() {
+//   const carritoprods = document.querySelector("#carritoprods");
+//   const prodsCarro = recuperoProdsLS();
+
+//   let listaCarro = document.createElement("ul");
+//     listaCarro.id = "txtProd";
+//     listaCarro.innerHTML = `<li>Origen: ${prodsCarro.origen}</li>
+//     <li>Precio: ${prodsCarro.precio}</li>
+//     <li>Peso: ${prodsCarro.peso}</li>`;
+//     carritoprods.appendChild(listaCarro);
+//     console.log(prodsCarro)
+// }
+
+  // carrito.forEach((prods) => {
+
+  //   let listaCarro = document.createElement("ul");
+  //   listaCarro.id = "txtProd";
+  //   listaCarro.innerHTML = `<li>Origen: ${prods.origen}</li>
+  //   <li>Precio: ${prods.precio}</li>
+  //   <li>Peso: ${prods.peso}</li>`;
+  //   carritoDiv.appendChild(listaCarro);
+
+  // });
+
+
+
