@@ -18,12 +18,12 @@ body {
   font-family: DynaPuff, sans-serif;
   font-size: 4rem;
 }
-.logoInicio{
-width: 8rem;
-height: 8rem;
-display: flex;
-margin-top: 0.5rem;
-margin-right: 3rem;
+.logoInicio {
+  width: 8rem;
+  height: 8rem;
+  display: flex;
+  margin-top: 0.5rem;
+  margin-right: 3rem;
 }
 
 #nav {
@@ -48,13 +48,11 @@ margin-right: 3rem;
 }
 
 #productos {
- 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: (auto, 1fr);
   margin: 2rem;
   padding: 2rem;
-
 }
 .imgBolsa {
   width: 38rem;
@@ -104,59 +102,54 @@ margin-right: 3rem;
   transition: all 0.3s;
 }
 
-
-footer{
-  background-color:rgb(252, 178, 66);
-  
+footer {
+  background-color: rgb(252, 178, 66);
 }
-#redes{
-display: flex;
-justify-content: center;
+#redes {
+  display: flex;
+  justify-content: center;
 }
 
-#insta{
-width: 10rem;
-margin-bottom: 1rem;
-margin-top: 1rem;
+#insta {
+  width: 10rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
-#facebook{
-margin-right: 2rem;
-margin-top: 1rem;
-margin-bottom: 1rem;
+#facebook {
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-#twitter{
-margin-bottom: 1rem;
-margin-top: 1rem;
+#twitter {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 footer div a img:hover {
   transform: rotate(46deg) scale(1.2);
-  transition: all .4s; }
-  
-  #btnCarrito{
-    height: 9rem;
-    width: 9rem;
-    background: none;
-    border: 0;
-    display: inline-block;
-   margin-left: 30rem;
-    
-  }
+  transition: all 0.4s;
+}
 
+#btnCarrito {
+  height: 9rem;
+  width: 9rem;
+  background: none;
+  border: 0;
+  display: inline-block;
+  margin-left: 30rem;
+}
 
-  #btnCarrito img{
-    height: 8rem;
-    width: 8rem;
-   
-  }
-  
+#btnCarrito img {
+  height: 8rem;
+  width: 8rem;
+}
 
-
-#carritoComp{
+#carritoComp {
+  display: flex;
   background-color: antiquewhite;
   width: 100rem;
-  height: 55rem;
+  height: auto;
   margin: auto;
   margin-top: 3rem;
   margin-bottom: 5rem;
@@ -164,42 +157,51 @@ footer div a img:hover {
   border-radius: 1rem;
 }
 
-
-#carritoProds{
-  background-color: rgb(252, 178, 66) ;
-  height: 55rem;
-  width: 70rem;
-float: left;
-border-top-left-radius: 0.7rem;
-border-bottom-left-radius: 0.7rem;
-font-size: 3rem;
+#txtCarritoVacio {
+  text-align: center;
+  font-family: DynaPuff, sans-serif;
+  font-size: 5rem;
 }
 
+#carritoProds {
+  background-color: rgb(252, 178, 66);
+  height: auto;
+  width: 70rem;
+  float: left;
+  border-top-left-radius: 0.7rem;
+  border-bottom-left-radius: 0.7rem;
+  font-size: 3rem;
+}
 
-#carritoBtns{
+.listaProdsCarro {
+  list-style: none;
+  font-size: 2rem;
+  font-family: DynaPuff, sans-serif;
+}
+
+#carritoBtns {
   background-color: rgb(150, 85, 0);
-  height: 55rem;
+  height: auto;
   width: 30rem;
   float: right;
   border-top-right-radius: 0.7rem;
   border-bottom-right-radius: 0.7rem;
 }
-#tituloCarrito{
+#tituloCarrito {
   color: aliceblue;
   font-size: 4rem;
   font-family: DynaPuff, sans-serif;
   text-align: center;
 }
 
-#btnVaciar{
-background-color: aliceblue;
-width: 5rem;
-height: 5rem;
-}
-
-#btnComprar{
+#btnVaciar {
   background-color: aliceblue;
   width: 5rem;
   height: 5rem;
 }
 
+#btnComprar {
+  background-color: aliceblue;
+  width: 5rem;
+  height: 5rem;
+}
