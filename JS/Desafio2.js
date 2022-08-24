@@ -77,7 +77,7 @@ function agregarAlCarrito(prods) {
   }
   localStorage.setItem("carrito", JSON.stringify(carrito));
   console.log(carrito);
-  cargarProds();
+
 }
 
 function recuperoProdsLS() {
@@ -89,8 +89,9 @@ function recuperoProdsLS() {
     });
   }
 }
-
+ 
 function cargarProds() {
+ 
   const cuerpo = document.getElementById("carritoProds");
   cuerpo.innerHTML = "";
   carrito.forEach((prodAgr) => {
@@ -103,27 +104,6 @@ function cargarProds() {
     </ul>`;
   });
 }
+  recuperoProdsLS();
+  cargarProds();
 
-// function renderizarCarrito() {
-//   const carritoprods = document.querySelector("#carritoprods");
-//   const prodsCarro = recuperoProdsLS();
-
-//   let listaCarro = document.createElement("ul");
-//     listaCarro.id = "txtProd";
-//     listaCarro.innerHTML = `<li>Origen: ${prodsCarro.origen}</li>
-//     <li>Precio: ${prodsCarro.precio}</li>
-//     <li>Peso: ${prodsCarro.peso}</li>`;
-//     carritoprods.appendChild(listaCarro);
-//     console.log(prodsCarro)
-// }
-
-// carrito.forEach((prods) => {
-
-//   let listaCarro = document.createElement("ul");
-//   listaCarro.id = "txtProd";
-//   listaCarro.innerHTML = `<li>Origen: ${prods.origen}</li>
-//   <li>Precio: ${prods.precio}</li>
-//   <li>Peso: ${prods.peso}</li>`;
-//   carritoDiv.appendChild(listaCarro);
-
-// });

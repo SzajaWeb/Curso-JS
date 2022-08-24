@@ -196,12 +196,22 @@ footer div a img:hover {
 
 #btnVaciar {
   background-color: aliceblue;
-  width: 5rem;
-  height: 5rem;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  font-family: DynaPuff, sans-serif;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  border-radius: 1rem;
 }
 
 #btnComprar {
   background-color: aliceblue;
-  width: 5rem;
-  height: 5rem;
+  display: flex;
+  text-align: center;
+  margin: auto;
+  font-family: DynaPuff, sans-serif;
+  margin-bottom: 5rem;
+  font-size: 3rem;
+  border-radius: 1rem;
 }
