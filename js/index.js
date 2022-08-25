@@ -6,7 +6,7 @@ class Cafe {
     this.peso = peso;
   }
 }
-const carrito = [];
+  const carrito = [];
 
 const origenes = [];
 function creoid() {
@@ -68,6 +68,7 @@ function agregarClick() {
 }
 
 function agregarAlCarrito(prods) {
+
   let existe = carrito.some((productoSome) => productoSome.id === prods.id);
   if (existe === false) {
     prods.cantidad = 1;
@@ -77,33 +78,5 @@ function agregarAlCarrito(prods) {
   }
   localStorage.setItem("carrito", JSON.stringify(carrito));
   console.log(carrito);
-
+  
 }
-
-function recuperoProdsLS() {
-  if (localStorage.carrito) {
-    const prodsGuardados = JSON.parse(localStorage.getItem("carrito"));
-
-    prodsGuardados.forEach((prod) => {
-      carrito.push(prod);
-    });
-  }
-}
- 
-function cargarProds() {
- 
-  const cuerpo = document.getElementById("carritoProds");
-  cuerpo.innerHTML = "";
-  carrito.forEach((prodAgr) => {
-    cuerpo.innerHTML += `
-    <ul class = "listaProdsCarro">
-    <li>ID: ${prodAgr.id}</li>
-    <li>Origen: ${prodAgr.origen}</li>
-    <li>Precio: ${prodAgr.precio}</li>
-    <li>Peso: ${prodAgr.peso}</li>
-    </ul>`;
-  });
-}
-  recuperoProdsLS();
-  cargarProds();
-

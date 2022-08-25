@@ -215,3 +215,29 @@ footer div a img:hover {
   font-size: 3rem;
   border-radius: 1rem;
 }
+#btnVaciar:hover {
+  filter: invert(100%);
+}
+
+#btnComprar:hover {
+  filter: invert(100%);
+}
+
+#precioFinal{
+  font-size: 3rem;
+  color: aliceblue;
+  text-align: center;
+  font-family: 'DynaPuff';
+}
+
+#finCompra{
+  background-color:rgb(252, 178, 66);
+  width: 50rem;
+  height: 50rem;
+}
+#txtFinCompra{
+  color: aliceblue;
+  font-size: 4rem;
+  font-family: DynaPuff, sans-serif;
+  text-align: center;
+}
