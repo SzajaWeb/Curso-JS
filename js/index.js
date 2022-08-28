@@ -6,21 +6,29 @@ class Cafe {
     this.peso = peso;
   }
 }
-  const carrito = [];
+const carrito = [];
+
+if(localStorage.carrito){
+
+
+const recuperoCarrito = JSON.parse(localStorage.getItem("carrito"));
+recuperoCarrito.forEach((prodCarrito) => {
+  carrito.push(prodCarrito);
+});
+}
+
 
 const origenes = [];
-function creoid() {
-  return parseInt(Math.random() * 100000);
-}
+
 function generadorauto() {
-  origenes.push(new Cafe(creoid(), "BRASIL", 900, "500 grs"));
-  origenes.push(new Cafe(creoid(), "HONDURAS", 850, "500 grs"));
-  origenes.push(new Cafe(creoid(), "INDIA", 1600, "500 grs"));
-  origenes.push(new Cafe(creoid(), "PERU", 550, "250 grs"));
-  origenes.push(new Cafe(creoid(), "COLOMBIA", 650, "250 grs"));
-  origenes.push(new Cafe(creoid(), "MEXICO", 1200, "500 grs"));
-  origenes.push(new Cafe(creoid(), "GUATEMALA", 1800, "1000 grs"));
-  origenes.push(new Cafe(creoid(), "ETIOPIA", 1500, "500 grs"));
+  origenes.push(new Cafe(1, "BRASIL", 900, "500 grs"));
+  origenes.push(new Cafe(2, "HONDURAS", 850, "500 grs"));
+  origenes.push(new Cafe(3, "INDIA", 1600, "500 grs"));
+  origenes.push(new Cafe(4, "PERU", 550, "250 grs"));
+  origenes.push(new Cafe(5, "COLOMBIA", 650, "250 grs"));
+  origenes.push(new Cafe(6, "MEXICO", 1200, "500 grs"));
+  origenes.push(new Cafe(7, "GUATEMALA", 1800, "1000 grs"));
+  origenes.push(new Cafe(8, "ETIOPIA", 1500, "500 grs"));
 }
 generadorauto();
 
@@ -68,7 +76,6 @@ function agregarClick() {
 }
 
 function agregarAlCarrito(prods) {
-
   let existe = carrito.some((productoSome) => productoSome.id === prods.id);
   if (existe === false) {
     prods.cantidad = 1;
@@ -76,7 +83,7 @@ function agregarAlCarrito(prods) {
   } else {
     prods.cantidad++;
   }
+ 
   localStorage.setItem("carrito", JSON.stringify(carrito));
   console.log(carrito);
-  
 }

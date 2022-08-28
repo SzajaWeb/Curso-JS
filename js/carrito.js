@@ -18,7 +18,7 @@ function cargarProds() {
   carrito.forEach((prodAgr) => {
     cuerpo.innerHTML += `
       <ul class = "listaProdsCarro">
-      <li>ID: ${prodAgr.id}</li>
+    
       <li>Origen: ${prodAgr.origen}</li>
       <li>Precio: ${prodAgr.precio}</li>
       <li>Peso: ${prodAgr.peso}</li>
@@ -32,6 +32,7 @@ function cargarProds() {
 document.getElementById("btnVaciar").addEventListener("click", () => {
   localStorage.removeItem("carrito");
   cuerpo.innerHTML = `<p id= "txtCarritoVacio" >tu carrito esta vacio</p>`;
+  txtPrecio.innerText = `PRECIO: $ 0`;
 });
 
 document.getElementById("btnComprar").addEventListener("click", () => {
@@ -56,13 +57,11 @@ document.getElementById("btnComprar").addEventListener("click", () => {
             doceCuotas: "12 cuotas",
           },
         },
+      
       });
-
-      if (Cuotas == unacuota && Cuotas == trescuotas) {
-        Swal.fire({
-          icon: "success",
-        });
-      }
+   
+     
+      
     } else if (result.isDenied) {
       Swal.fire({
         icon: "success",
