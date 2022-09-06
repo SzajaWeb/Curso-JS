@@ -37,14 +37,12 @@ document.getElementById("btnVaciar").addEventListener("click", () => {
 
 document.getElementById("btnComprar").addEventListener("click", () => {
   Swal.fire({
-
     title: "Desea cuotificar su compra?",
     showDenyButton: true,
     showCancelButton: true,
     confirmButtonText: "SI",
     denyButtonText: `NO`,
   }).then((result) => {
-  
     if (result.isConfirmed) {
       Swal.fire({
         title: "selecciona la cantidad de cuotas",
@@ -57,20 +55,18 @@ document.getElementById("btnComprar").addEventListener("click", () => {
             doceCuotas: "12 cuotas",
           },
         },
-      
       });
-   
-     
-      
     } else if (result.isDenied) {
       Swal.fire({
         icon: "success",
         title: "Gracias por su compra!!",
       });
     }
+    
   });
+  cuerpo.innerHTML = `<p id= "txtCarritoVacio" >tu carrito esta vacio</p>`;
+  txtPrecio.innerText = `PRECIO: $ 0`;
 });
-
 
 recuperoProdsLS();
 cargarProds();

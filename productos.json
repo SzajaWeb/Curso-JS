@@ -1,0 +1,50 @@
+[
+  {
+    "origen": "BRASIL",
+    "precio": 900,
+    "peso": "500 grs",
+    "id": "1"
+  },
+  {
+    "origen": "HONDURAS",
+    "precio": 850,
+    "peso": "500 grs",
+    "id": "2"
+  },
+  {
+    "origen": "INDIA",
+    "precio": 1600,
+    "peso": "500 grs",
+    "id": "3"
+  },
+  {
+    "origen": "PERU",
+    "precio": 550,
+    "peso": "250 grs",
+    "id": "4"
+  },
+  {
+    "origen": "COLOMBIA",
+    "precio": 650,
+    "peso": "250 grs",
+    "id": "5"
+  },
+  {
+    "origen": "MEXICO",
+    "precio": 1200,
+    "peso": "500 grs",
+    "id": "6"
+  },
+  {
+    "origen": "GUATEMALA",
+    "precio": 1800,
+    "peso": "1000 grs",
+    "id": "7"
+  },
+  {
+    "origen": "ETIOPIA",
+    "precio": 1500,
+    "peso": "500 grs",
+    "id": "8"
+  }
+]

@@ -8,15 +8,12 @@ class Cafe {
 }
 const carrito = [];
 
-if(localStorage.carrito){
-
-
-const recuperoCarrito = JSON.parse(localStorage.getItem("carrito"));
-recuperoCarrito.forEach((prodCarrito) => {
-  carrito.push(prodCarrito);
-});
+if (localStorage.carrito) {
+  const recuperoCarrito = JSON.parse(localStorage.getItem("carrito"));
+  recuperoCarrito.forEach((prodCarrito) => {
+    carrito.push(prodCarrito);
+  });
 }
-
 
 const origenes = [];
 
@@ -83,7 +80,7 @@ function agregarAlCarrito(prods) {
   } else {
     prods.cantidad++;
   }
- 
+
   localStorage.setItem("carrito", JSON.stringify(carrito));
-  console.log(carrito);
 }
+
