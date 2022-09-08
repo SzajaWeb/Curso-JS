@@ -1,8 +1,10 @@
+(async function () {
+  const respuesta = await fetch('../productos.json');
+  const origenes = await respuesta.json();
 
-const origenes = fetch("../productos.json")
 
 
-
+const carrito = [];
 
 const producto = document.getElementById("productos");
 
@@ -59,3 +61,4 @@ function agregarAlCarrito(prods) {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 }
 
+})();
