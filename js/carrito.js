@@ -52,9 +52,43 @@ document.getElementById("btnComprar").addEventListener("click", () => {
             unacuota: "1 cuota",
             trescuotas: "3 cuotas",
             seiscuotas: "6 cuotas",
-            doceCuotas: "12 cuotas",
+            docecuotas: "12 cuotas",
           },
         },
+      }).then((res) => {
+        let valorcuota = 0;
+        switch (res.value) {
+          case "unacuota":
+            Swal.fire({
+              icon: "success",
+              title: `el precio final es $ ${precioFinal}`,
+            });
+            break;
+          case "trescuotas":
+            precioFinal = precioFinal * 1.15;
+            valorcuota = precioFinal / 3;
+            Swal.fire({
+              icon: "success",
+              title: `el precio final es $ ${precioFinal.toFixed(2)} y el valor de cada cuota es $ ${valorcuota.toFixed(2)}`,
+            });
+            break;
+          case "seiscuotas":
+            precioFinal = precioFinal * 1.15;
+            valorcuota = precioFinal / 6;
+            Swal.fire({
+              icon: "success",
+              title: `el precio final es $ ${precioFinal.toFixed(2)} y el valor de cada cuota es $ ${valorcuota.toFixed(2)}`,
+            });
+            break;
+          case "docecuotas":
+            precioFinal = precioFinal * 1.15;
+            valorcuota = precioFinal / 12;
+            Swal.fire({
+              icon: "success",
+              title: `el precio final es $ ${precioFinal.toFixed(2)} y el valor de cada cuota es $ ${valorcuota.toFixed(2)}`,
+            });
+            break;
+        }
       });
     } else if (result.isDenied) {
       Swal.fire({
@@ -62,7 +96,6 @@ document.getElementById("btnComprar").addEventListener("click", () => {
         title: "Gracias por su compra!!",
       });
     }
-    
   });
   cuerpo.innerHTML = `<p id= "txtCarritoVacio" >tu carrito esta vacio</p>`;
   txtPrecio.innerText = `PRECIO: $ 0`;

@@ -1,33 +1,8 @@
-class Cafe {
-  constructor(id, origen, precio, peso) {
-    this.id = id;
-    this.origen = origen;
-    this.precio = precio;
-    this.peso = peso;
-  }
-}
-const carrito = [];
 
-if (localStorage.carrito) {
-  const recuperoCarrito = JSON.parse(localStorage.getItem("carrito"));
-  recuperoCarrito.forEach((prodCarrito) => {
-    carrito.push(prodCarrito);
-  });
-}
+const origenes = fetch("../productos.json")
 
-const origenes = [];
 
-function generadorauto() {
-  origenes.push(new Cafe(1, "BRASIL", 900, "500 grs"));
-  origenes.push(new Cafe(2, "HONDURAS", 850, "500 grs"));
-  origenes.push(new Cafe(3, "INDIA", 1600, "500 grs"));
-  origenes.push(new Cafe(4, "PERU", 550, "250 grs"));
-  origenes.push(new Cafe(5, "COLOMBIA", 650, "250 grs"));
-  origenes.push(new Cafe(6, "MEXICO", 1200, "500 grs"));
-  origenes.push(new Cafe(7, "GUATEMALA", 1800, "1000 grs"));
-  origenes.push(new Cafe(8, "ETIOPIA", 1500, "500 grs"));
-}
-generadorauto();
+
 
 const producto = document.getElementById("productos");
 
