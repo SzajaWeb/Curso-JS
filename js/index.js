@@ -1,15 +1,19 @@
+const carrito = [];
+
 (async function () {
   const respuesta = await fetch("../productos.json");
   const origenes = await respuesta.json();
 
-  const carrito = [];
-
+  
+function traerLS() {
   if (localStorage.carrito) {
     const recuperoCarrito = JSON.parse(localStorage.getItem("carrito"));
     recuperoCarrito.forEach((prodCarrito) => {
       carrito.push(prodCarrito);
     });
   }
+} traerLS();
+  
   const producto = document.getElementById("productos");
 
   function crearProducto() {
@@ -50,10 +54,12 @@
         .addEventListener("click", () => {
           agregarAlCarrito(prods);
         });
+        
     });
   }
 
   function agregarAlCarrito(prods) {
+   
     let existe = carrito.some((productoSome) => productoSome.id === prods.id);
     if (existe === false) {
       prods.cantidad = 1;
@@ -61,7 +67,8 @@
     } else {
       prods.cantidad++;
     }
-
+    
     localStorage.setItem("carrito", JSON.stringify(carrito));
   }
+
 })();

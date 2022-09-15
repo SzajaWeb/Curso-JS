@@ -25,6 +25,7 @@ function cargarProds() {
       <li>Cant
       : ${prodAgr.cantidad}</li>
       </ul>`;
+      
     precioFinal = precioFinal + prodAgr.precio * prodAgr.cantidad;
   });
 }
